@@ -35,3 +35,20 @@ SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 alias ls='ls --color=auto'
+
+gitcommit() {
+    git add .
+    git commit -m "$*"
+}
+alias commit=gitcommit
+
+launchtetris() {
+  firefox -new-tab -url https://goo.gl/oCrmQb
+  fceux --nogui /home/pipas/Games/Tetris/tetris.nes
+}
+
+alias tetris=launchtetris
+
+export PATH="/home/pipas/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
