@@ -36,19 +36,18 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 alias ls='ls --color=auto'
 
-gitcommit() {
-    git add .
-    git commit -m "$*"
-}
-alias commit=gitcommit
-
-launchtetris() {
-  firefox -new-tab -url https://goo.gl/oCrmQb
-  fceux --nogui /home/pipas/Games/Tetris/tetris.nes
-}
-
 alias tetris=launchtetris
+launchtetris() {
+    fceux --nogui --loadstate ~/Games/Tetris/menu.sav ~/Games/Tetris/tetris.nes
+}
+
+#Flutter
+export PATH=$PATH:/home/pipas/Development/flutter/bin
 
 export PATH="/home/pipas/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+twitch() {
+    streamlink twitch.tv/"$1" best
+}
