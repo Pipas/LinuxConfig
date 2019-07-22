@@ -10,13 +10,13 @@ I plan to maintaign this repository for myself and things will be updated over t
 
 ## Table of Conntents
 - [Distro](#distro)
-- [Pre-requesites](#[pre-requesites])
-- [Look](#[look])
-- [Extensions](#[extensions])
-- [Touchpad Gestures](#[touchpad-gestures])
-- [Albert](#[touchpad-gestures])
-- [Terminal](#[terminal])
-- [Development](#[development])
+- [Pre-requesites](#pre-requesites)
+- [Look](#look)
+- [Extensions](#extensions)
+- [Touchpad Gestures](#touchpad-gestures)
+- [Albert](#albert)
+- [Terminal](#terminal)
+- [Development](#development)
 
 ## Distro
 
