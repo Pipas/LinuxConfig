@@ -9,14 +9,16 @@ Do keep in mind that I'm not a Linux expert or claim to be one, what I'm most lo
 I plan to maintaign this repository for myself and things will be updated over time as I change my personal config, learn and discover new things.
 
 ## Table of Conntents
-- [Distro](#distro)
-- [Pre-requesites](#[pre-requesites])
-- [Look](#[look])
-- [Extensions](#[extensions])
-- [Touchpad Gestures](#[touchpad-gestures])
-- [Albert](#[touchpad-gestures])
-- [Terminal](#[terminal])
-- [Development](#[development])
+  - [Introduction](#introduction)
+  - [Table of Conntents](#table-of-conntents)
+  - [Distro](#distro)
+  - [Pre-requesites](#pre-requesites)
+  - [Look](#look)
+  - [Extensions](#extensions)
+  - [Touchpad Gestures](#touchpad-gestures)
+  - [Albert](#albert)
+  - [Terminal](#terminal)
+  - [Development](#development)
 
 ## Distro
 
@@ -24,7 +26,7 @@ Following the theme of ease of use [Ubuntu 19.04](https://ubuntu.com/download/de
 
 ## Pre-requesites
 
-To start clone this repository in your home directory
+To start, clone this repository in your home directory
 
 ```shell
 git clone https://github.com/Pipas/Dotfiles .dotfiles
@@ -40,13 +42,15 @@ A great piece of software to aid your custommization of gnome is `Gnome Tweak To
 sudo apt install gnome-tweak-tool
 ```
 
-Another helper to faster install themes from the [gnome-look](gnome-look.org) website is [`OCS-url`](https://www.pling.com/p/1136805/).
+Another helper to faster install themes from the [gnome-look.org](gnome-look.org) is [`OCS-url`](https://www.pling.com/p/1136805/).
 
-#### Gnome and Shell theme - [Macterial](https://www.gnome-look.org/p/1248255/) by MYHTIO
+Here are the themes that I use.
 
-#### Icon theme - [Paper](https://snwh.org/paper) by Sam Hewitt
+- #### Gnome and Shell theme - [Macterial](https://www.gnome-look.org/p/1248255/) by MYHTIO
 
-#### Cursor theme - [Bibata](https://www.gnome-look.org/p/1197198/) by KaizIqbal
+- #### Icon theme - [Paper](https://snwh.org/paper) by Sam Hewitt
+
+- #### Cursor theme - [Bibata](https://www.gnome-look.org/p/1197198/) by KaizIqbal
 
 #### Fonts
 
@@ -67,21 +71,21 @@ To set them use the Tweak Tool, here are the values I use:
 
 There are several Gnome extensions that make the experience much better and tweak the system to your liking. There are many to choose from at [extensions.gnome.org](https://extensions.gnome.org/) and here are some of the ones I use.
 
-#### [User Themes](https://extensions.gnome.org/extension/19/user-themes/) - **needed to change the default shell theme**, as stated in all the comments should be enabled by default.
+- #### [User Themes](https://extensions.gnome.org/extension/19/user-themes/) - **needed to change the default shell theme**, as stated in all the comments should be enabled by default.
 
-#### [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) - changes the gnome bar to a dock, highly customizable.
+- #### [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) - changes the gnome bar to a dock, highly customizable.
 
-#### [OpenWeather](https://extensions.gnome.org/extension/750/openweather/) - weather indicator on your top bar, useful to have at times, highly customizable.
+- #### [OpenWeather](https://extensions.gnome.org/extension/750/openweather/) - weather indicator on your top bar, useful to have at times, highly customizable.
 
-#### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.
+- #### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.
 
-#### [Remove App Menu](https://extensions.gnome.org/extension/591/remove-app-menu/) - Removes app menu from top bar to reduce clutter.
+- #### [Remove App Menu](https://extensions.gnome.org/extension/591/remove-app-menu/) - Removes app menu from top bar to reduce clutter.
 
-#### [Hide Activities Button](https://extensions.gnome.org/extension/744/hide-activities-button/) - hides the activities button.
+- #### [Hide Activities Button](https://extensions.gnome.org/extension/744/hide-activities-button/) - hides the activities button.
 
 ## Touchpad Gestures
 
-If you're using Linux in a laptop with a modern touchpad enabling gestures is a no brainer to increase productivity, I have achieved this with a program called [fusuma](https://github.com/iberianpig/fusuma) pointed out by [this](https://askubuntu.com/a/1044184) response by Rachit Kinger on an askubuntu question, I am pasting the answer here and might change it in the future if need be.
+If you're using Linux in a laptop with a modern touchpad enabling gestures is a no brainer to increase productivity, I have achieved this with a program called [fusuma](https://github.com/iberianpig/fusuma) pointed out in [this](https://askubuntu.com/a/1044184) response by Rachit Kinger on an askubuntu question, I am pasting the answer here as I might change it in the future if need be.
 
 First of all check if your current user is part of the input group. You can do that by
 
@@ -109,7 +113,7 @@ Now install fusuma
 sudo gem install fusuma  
 ```
 
-My personal gestures file is in this repository in the older called fusuma, I create a symlink to this folder at `~/.config`
+My personal gestures file is in this repository in the folder called fusuma, to use it create a symlink to this folder at `~/.config`
 
 ```shell
 ln -s ~/.dotfiles/fusuma ~/.config/fusuma
@@ -120,19 +124,17 @@ Test if everything is working before adding the fusuma command to your startup a
 sudo fusuma
 ```
 
-
 In Ubuntu you can do it by searching for the `Startup Applications` and adding `fusuma` as a command.
 
 ## Albert
 
 [Albert](https://albertlauncher.github.io/) is a desktop laucher for linux, it's simple, fast and it helps you get to what you want faster. I use Albert quite a lot and I have it bound to the *windows* (super) key on my keyboard.
 
-To do this we first start with installing albert, you  can follow instructions on how to to that [here](https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert).
-
+To do this we first start with installing Albert, instructions on how to do it can be found [here](https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert).
 
 After albert is installed, open it and bind the Hotkey combination to `ctrl + Space`.
 
-Now we can bind the super key to that combination so when pressed it'll toggle albert, first unbind the key
+Now we can bind the super key to that combination so when pressed it'll toggle Albert, first unbind the key in gnome
 ```shell
 gsettings set org.gnome.mutter overlay-key ""
 ```
