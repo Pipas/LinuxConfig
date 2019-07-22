@@ -9,8 +9,6 @@ Do keep in mind that I'm not a Linux expert or claim to be one, what I'm most lo
 I plan to maintaign this repository for myself and things will be updated over time as I change my personal config, learn and discover new things.
 
 ## Table of Conntents
-  - [Introduction](#introduction)
-  - [Table of Conntents](#table-of-conntents)
   - [Distro](#distro)
   - [Pre-requesites](#pre-requesites)
   - [Look](#look)
