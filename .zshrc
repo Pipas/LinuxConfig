@@ -36,8 +36,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 alias ls='ls --color=auto'
 
-alias tetris=launchtetris
-launchtetris() {
+tetris() {
     fceux --nogui --loadstate ~/Games/Tetris/menu.sav ~/Games/Tetris/tetris.nes
 }
 
@@ -49,5 +48,5 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 twitch() {
-    streamlink twitch.tv/"$1" best
+    streamlink https://twitch.tv/"$1" best
 }
