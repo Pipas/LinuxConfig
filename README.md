@@ -1,5 +1,7 @@
 # Pipas' Linux Config Guide
 
+![Screenshots](screenshot.jpeg)
+
 ## Introduction
 
 The purpose of this repository is to serve as a **personal** checklist to install and configure linux to my liking as fast possible.
