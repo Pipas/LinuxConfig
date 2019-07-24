@@ -1,4 +1,4 @@
-# Pipas' Linux Config
+# Pipas' Linux Config Guide
 
 ## Introduction
 
@@ -24,10 +24,10 @@ Following the theme of ease of use [Ubuntu 19.04](https://ubuntu.com/download/de
 
 ## Pre-requesites
 
-To start, clone this repository in your home directory
+To start, clone this repository in your home directory (I clone it to a dot folder so it doesn't show up in file managers)
 
 ```shell
-git clone https://github.com/Pipas/Dotfiles .dotfiles
+git clone https://github.com/Pipas/LinuxConfig .dotfiles
 ```
 
 ## Look
