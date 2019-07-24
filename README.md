@@ -1,7 +1,7 @@
 # Pipas' Linux Config Guide
 
-![Screenshot1](screenshot1.png)
-![Screenshot2](screenshot2.png)
+![Screenshot1](screenshots/screenshot1.png)
+![Screenshot2](screenshots/screenshot2.png)
 
 ## Introduction
 
