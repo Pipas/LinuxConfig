@@ -1,8 +1,5 @@
 # Pipas' Linux Config Guide
 
-![Screenshot1](screenshots/screenshot1.png)
-![Screenshot2](screenshots/screenshot2.png)
-
 ## Introduction
 
 The purpose of this repository is to serve as a **personal** checklist to install and configure linux to my liking as fast possible.
@@ -10,6 +7,11 @@ The purpose of this repository is to serve as a **personal** checklist to instal
 Do keep in mind that I'm not a Linux expert or claim to be one, what I'm most looking for in a distro is ease of use and maitainability so it might not be what you're looking for.
 
 I plan to maintaign this repository for myself and things will be updated over time as I change my personal config, learn and discover new things.
+
+## Screenshots
+
+![Screenshot1](screenshots/screenshot1.png)
+![Screenshot2](screenshots/screenshot2.png)
 
 ## Table of Conntents
   - [Distro](#distro)
