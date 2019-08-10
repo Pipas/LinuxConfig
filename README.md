@@ -4,30 +4,39 @@
 
 The purpose of this repository is to serve as a **personal** checklist to install and configure linux to my liking as fast possible.
 
-Do keep in mind that I'm not a Linux expert or claim to be one, what I'm most looking for in a distro is ease of use and maitainability so it might not be what you're looking for.
+Do keep in mind that I'm not a Linux expert or claim to be one, what I'm most looking for in a distro is ease of use and maintainability so it might not be what you're looking for.
 
-I plan to maintaign this repository for myself and things will be updated over time as I change my personal config, learn and discover new things.
+I plan to maintain this repository for myself and things will be updated over time as I change my personal config, learn and discover new things.
+
+### Community Update
+
+After initially writing this guide I've received suggestions and feedback that I would like to incorporate into it. To achieve this without deviating too much from the main goal of the project (to serve as a personal checklist) these suggestions will be marked with an icon (👥) and may not be used by me, personally.
+
+If you'd also like to contribute to this repository in any way or suggest something feel free to do so by submitting an [issue](https://github.com/Pipas/LinuxConfig/issues).
 
 ## Screenshots
 
 ![Screenshot1](screenshots/screenshot1.png)
 ![Screenshot2](screenshots/screenshot2.png)
 
-## Table of Conntents
+## Table of Contents
   - [Distro](#distro)
-  - [Pre-requesites](#pre-requesites)
+  - [Pre-requisites](#pre-requisites)
   - [Look](#look)
   - [Extensions](#extensions)
   - [Touchpad Gestures](#touchpad-gestures)
   - [Albert](#albert)
   - [Terminal](#terminal)
   - [Development](#development)
+  - [Other Software](#other-software)
+  - [Snap Software](#snap-software)
+  - [Contributors](#contributors)
 
 ## Distro
 
-Following the theme of ease of use [Ubuntu 19.04](https://ubuntu.com/download/desktop) is my distro of choice as I found it to be the most hassle free distribution of Linux. It's well support by most mainstream apps (like Spotify and Discord) and the community support is great for those who want a nice experience without needing to delve to deep into the system. I have tried Fedora, Manjaro and Arch in the past but keep coming back to Ubuntu for these reasons.
+Following the theme of ease of use [Ubuntu 19.04](https://ubuntu.com/download/desktop) is my distro of choice as I found it to be the most hassle free distribution of Linux. It's well support by most mainstream apps (like Spotify and Discord) and the community support is great for those who want a nice experience without needing to delve to deep into the system. I have tried Fedora, Manjaro and Arch in the past but keep coming back to Ubuntu for these reasons. Also [PPAs](https://en.wikipedia.org/wiki/Ubuntu#Package_Archives).
 
-## Pre-requesites
+## Pre-requisites
 
 To start, clone this repository in your home directory (I clone it to a dot folder so it doesn't show up in file managers)
 
@@ -39,7 +48,7 @@ git clone https://github.com/Pipas/LinuxConfig .dotfiles
 
 I use Gnome as my desktop environment, it comes built in with new versions of Ubuntu and I found it to work best for me.
 
-A great piece of software to aid your custommization of gnome is `Gnome Tweak Tool`
+A great piece of software to aid your customization of gnome is `Gnome Tweak Tool`
 
 ```shell
 sudo apt install gnome-tweak-tool
@@ -49,13 +58,16 @@ Another helper to faster install themes from the [gnome-look.org](gnome-look.org
 
 Here are the themes that I use.
 
-- #### Gnome and Shell theme - [Macterial](https://www.gnome-look.org/p/1248255/) by MYHTIO
+### Gnome and Shell theme 
+ - [Macterial](https://www.gnome-look.org/p/1248255/) by MYHTIO
 
-- #### Icon theme - [Paper](https://snwh.org/paper) by Sam Hewitt
+### Icon theme
+- [Paper](https://snwh.org/paper) by Sam Hewitt
 
-- #### Cursor theme - [Bibata](https://www.gnome-look.org/p/1197198/) by KaizIqbal
+### Cursor theme
+- [Bibata](https://www.gnome-look.org/p/1197198/) by KaizIqbal
 
-#### Fonts
+### Fonts
 
 The fonts I use for my distro can be found in a fonts folder in this repo. To use them copy them to .fonts
 ```shell
@@ -82,11 +94,13 @@ There are several Gnome extensions that make the experience much better and twea
 
 - #### [OpenWeather](https://extensions.gnome.org/extension/750/openweather/) - weather indicator on your top bar, useful to have at times, highly customizable.
 
-- #### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.
+- #### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.~~
 
 - #### [Remove App Menu](https://extensions.gnome.org/extension/591/remove-app-menu/) - Removes app menu from top bar to reduce clutter.
 
 - #### [Hide Activities Button](https://extensions.gnome.org/extension/744/hide-activities-button/) - hides the activities button.
+
+- #### [GS Connect](https://extensions.gnome.org/extension/1319/gsconnect/) - connects with KDE Connect. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
 ### Spotify Display
 On the folder argos you can find a script that adds your currently playing song to the Gnome top bar. To install it after installing the [Argos](https://extensions.gnome.org/extension/1176/argos/) extension described above, copy the contents of this folder to the argos config location
@@ -146,9 +160,13 @@ sudo fusuma
 
 In Ubuntu you can do it by searching for the `Startup Applications` and adding `fusuma` as a command.
 
+---
+Alternatively you can use [libinput-gestures](https://github.com/bulletmark/libinput-gestures) [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+
+
 ## Albert
 
-[Albert](https://albertlauncher.github.io/) is a desktop laucher for linux, it's simple, fast and it helps you get to what you want faster. I use Albert quite a lot and I have it bound to the *windows* (super) key on my keyboard.
+[Albert](https://albertlauncher.github.io/) is a desktop launcher for linux, it's simple, fast and it helps you get to what you want faster. I use Albert quite a lot and I have it bound to the *windows* (super) key on my keyboard.
 
 To do this we first start with installing Albert, instructions on how to do it can be found [here](https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert).
 
@@ -178,13 +196,14 @@ to your `Startup Applications` so they both run when you boot the system.
 
 ## Terminal
 
-My shell of choice is ZSH with the [Spaceship prompt](https://github.com/denysdovhan/spaceship-prompt). The instalation process for this is extremely easy since zplug handles most of it if you use my `.zshrc` file.
+My shell of choice is ZSH with the [Spaceship prompt](https://github.com/denysdovhan/spaceship-prompt). The installation process for this is extremely easy since zplug handles most of it if you use my `.zshrc` file.
 
 First we need to install zsh (we'll also install the powerline fonts needed for the prompt)
 ```shell
 sudo apt install zsh
 sudo apt install powerline fonts-powerline
 ```
+I also had to install Google Noto Fonts `sudo apt install fonts-noto` so that the emojis could work properly.
 
 Now change the default shell to zsh
 ```shell
@@ -204,8 +223,46 @@ Finally logout to apply the changes.
 
 When opening the terminal again you'll be prompted if you want to install missing plugins just press Y and wait. You'll get a pyenv error but I'll explain how to install pyenv in the next section.
 
+___
+
+or alternatively:
+
+`npm install -g spaceship-prompt`
+
 ## Development
 
 ### pyenv
 
 I use [pyenv](https://github.com/pyenv/pyenv) to manage python virtual environments and versions for all my python projects, it can easely be installed by using the [pyenv-installer](https://github.com/pyenv/pyenv-installer).
+Check the [wiki](https://github.com/pyenv/pyenv/wiki) to install the necessary dependencies for installing python versions.
+### nvm 
+I use [nvm](https://github.com/nvm-sh/nvm) to manage npm environments and versions for all my npm projects, it can easely be installed by using `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+
+### [docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04) and [docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04) [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+
+### ssh keys
+If you are like me and you forget to copy your ssh keys [every](https://help.github.com/en/articles/checking-for-existing-ssh-keys) ...[fucking](https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) ...[time](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account) follow the links to check/generate/add new ones. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+
+
+## Other Software
+
+- #### [TLP](https://linrunner.de/en/tlp/tlp.html) - Linux Advanced Power Management.
+- #### [CherryTree](https://www.giuspen.com/cherrytree/) - A hierarchical note taking application, featuring rich text and syntax highlighting, storing data in a single xml or sqlite file. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+- #### [KeeWeb](https://keeweb.info/) - Free cross-platform password manager compatible with KeePass. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+- #### [Intellij](https://www.jetbrains.com/idea/) - Integrated development environment (IDE) for developing computer software. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+
+## Snap Software
+
+You can search thousands of snaps used by millions of people across 41 Linux distributions in the [snap](https://media1.tenor.com/images/e36fb32cfc3b63075adf0f1843fdc43a/tenor.gif?itemid=12502580) [store](https://snapcraft.io/store)
+I like:
+- [Slack](https://snapcraft.io/slack)
+- [Discord](https://snapcraft.io/discord)
+- [Sublime](https://snapcraft.io/sublime-text)
+- [VSCode](https://snapcraft.io/code)
+- [VLC](https://snapcraft.io/vlc)
+- [Spotify](https://snapcraft.io/spotify) - 4k displays owners click [here](https://community.spotify.com/t5/Desktop-Linux/Spotify-Hi-DPI-Fix-for-Snap-install/td-p/4576328) or [here](https://www.amazon.com/s?k=magnifier&crid=3HJHDUKJU50N8&sprefix=Magnifier%2Caps%2C396&ref=nb_sb_ss_i_1_9)
+
+## Contributors
+A big thanks to everyone that helped by either suggesting or contributing to this guide, you can find them and their projects here:
+
+- [Afonso Pinto](https://github.com/afonsobspinto)
