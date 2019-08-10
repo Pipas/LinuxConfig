@@ -251,7 +251,8 @@ If you are like me and you forget to copy your ssh keys [every](https://help.git
 - #### [KeeWeb](https://keeweb.info/) - Free cross-platform password manager compatible with KeePass. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 - #### [Intellij](https://www.jetbrains.com/idea/) - Integrated development environment (IDE) for developing computer software. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
-## Snap Software [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+## Snap Software
+
 You can search thousands of snaps used by millions of people across 41 Linux distributions in the [snap](https://media1.tenor.com/images/e36fb32cfc3b63075adf0f1843fdc43a/tenor.gif?itemid=12502580) [store](https://snapcraft.io/store)
 I like:
 - [Slack](https://snapcraft.io/slack)
