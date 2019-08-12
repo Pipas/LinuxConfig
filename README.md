@@ -6,11 +6,11 @@ The purpose of this repository is to serve as a **personal** checklist to instal
 
 Do keep in mind that I'm not a Linux expert or claim to be one, what I'm most looking for in a distro is ease of use and maintainability so it might not be what you're looking for.
 
-I plan to maintain this repository for myself and things will be updated over time as I change my personal config, learn and discover new things.
+I plan to maintain this repository for myself and update it over time as I change my personal config, learn and discover new things.
 
 ### Community Update
 
-After initially writing this guide I've received suggestions and feedback that I would like to incorporate into it. To achieve this without deviating too much from the main goal of the project (to serve as a personal checklist) these suggestions will be marked with an icon (👥) and may not be used by me, personally.
+After initially writing this guide I've received suggestions and feedback that I would like to see incorporated. To achieve this without deviating too much from the main goal of the project (to serve as a personal checklist) these suggestions will be marked with an icon (👥) and may not be used by me personally.
 
 If you'd also like to contribute to this repository in any way or suggest something feel free to do so by submitting an [issue](https://github.com/Pipas/LinuxConfig/issues).
 
@@ -34,7 +34,7 @@ If you'd also like to contribute to this repository in any way or suggest someth
 
 ## Distro
 
-Following the theme of ease of use [Ubuntu 19.04](https://ubuntu.com/download/desktop) is my distro of choice as I found it to be the most hassle free distribution of Linux. It's well support by most mainstream apps (like Spotify and Discord) and the community support is great for those who want a nice experience without needing to delve to deep into the system. I have tried Fedora, Manjaro and Arch in the past but keep coming back to Ubuntu for these reasons. Also [PPAs](https://en.wikipedia.org/wiki/Ubuntu#Package_Archives).
+[Pop!_OS 19.04](https://system76.com/pop) is my distro of choice, it's based on Ubuntu so you get good support from most mainstream apps (like Spotify and Discord) aswell as the Ubuntu community, but it's lighter, faster and just a better experience overall. It also has an ISO with nvidea drivers pre packaged so you don't have to install them yourself and you can take advantage of Ubuntu [PPAs](https://en.wikipedia.org/wiki/Ubuntu#Package_Archives). I found it to be a great experience out of the box even without the further customizations explained ahead and would recommend it to anyone wanting to try out Linux.
 
 ## Pre-requisites
 
@@ -92,9 +92,11 @@ There are several Gnome extensions that make the experience much better and twea
 
 - #### [Argos](https://extensions.gnome.org/extension/1176/argos/) - loads Gnome extensions, used to display spotify current track on top bar.
 
+- #### [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/) - Changes the alt-tab menu to show window previews and all windows seperate.
+
 - #### [OpenWeather](https://extensions.gnome.org/extension/750/openweather/) - weather indicator on your top bar, useful to have at times, highly customizable.
 
-- #### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.~~
+- #### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.
 
 - #### [Remove App Menu](https://extensions.gnome.org/extension/591/remove-app-menu/) - Removes app menu from top bar to reduce clutter.
 
@@ -119,50 +121,13 @@ This extension was created by giedriusStan and tweaked by me, the original repos
 
 ## Touchpad Gestures
 
-If you're using Linux in a laptop with a modern touchpad enabling gestures is a no brainer to increase productivity, I have achieved this with a program called [fusuma](https://github.com/iberianpig/fusuma) pointed out in [this](https://askubuntu.com/a/1044184) response by Rachit Kinger on an askubuntu question, I am pasting the answer here as I might change it in the future if need be.
+If you're using Linux in a laptop with a modern touchpad enabling gestures is a no brainer to increase productivity, I have achieved this with a program called [libinput-gestures](https://github.com/bulletmark/libinput-gestures) [👥](https://github.com/Pipas/LinuxConfig/pull/3).
 
-First of all check if your current user is part of the input group. You can do that by
-
-```shell
-sudo gpasswd -a $USER input  
-```
-
-Then log out and log back in. Now install xdotool and libinput-tools.
+They have [installation instructions](https://github.com/bulletmark/libinput-gestures) on their repo, after the instalation is done you can use my personal config file by creating a symlink to it 
 
 ```shell
-sudo apt-get install libinput-tools  
-
-sudo apt-get install xdotool  
+ln -s ~/.dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
 ```
-
-If you haven't installed Ruby you can do that now:
-
-```shell
-sudo apt install ruby  
-```
-
-Now install fusuma
-
-```shell
-sudo gem install fusuma  
-```
-
-My personal gestures file is in this repository in the folder called fusuma, to use it create a symlink to this folder at `~/.config`
-
-```shell
-ln -s ~/.dotfiles/fusuma ~/.config/fusuma
-```
-
-Test if everything is working before adding the fusuma command to your startup applications.
-```shell
-sudo fusuma
-```
-
-In Ubuntu you can do it by searching for the `Startup Applications` and adding `fusuma` as a command.
-
----
-Alternatively you can use [libinput-gestures](https://github.com/bulletmark/libinput-gestures) [👥](https://github.com/Pipas/LinuxConfig/pull/3)
-
 
 ## Albert
 
@@ -198,12 +163,10 @@ to your `Startup Applications` so they both run when you boot the system.
 
 My shell of choice is ZSH with the [Spaceship prompt](https://github.com/denysdovhan/spaceship-prompt). The installation process for this is extremely easy since zplug handles most of it if you use my `.zshrc` file.
 
-First we need to install zsh (we'll also install the powerline fonts needed for the prompt)
+First we need to install zsh (we'll also install the powerline and noto fonts needed for the prompt)
 ```shell
-sudo apt install zsh
-sudo apt install powerline fonts-powerline
+sudo apt install zsh powerline fonts-powerline fonts-noto
 ```
-I also had to install Google Noto Fonts `sudo apt install fonts-noto` so that the emojis could work properly.
 
 Now change the default shell to zsh
 ```shell
@@ -227,7 +190,9 @@ ___
 
 or alternatively:
 
-`npm install -g spaceship-prompt`
+```shell
+npm install -g spaceship-prompt
+```
 
 ## Development
 
@@ -243,24 +208,19 @@ I use [nvm](https://github.com/nvm-sh/nvm) to manage npm environments and versio
 ### ssh keys
 If you are like me and you forget to copy your ssh keys [every](https://help.github.com/en/articles/checking-for-existing-ssh-keys) ...[fucking](https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) ...[time](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account) follow the links to check/generate/add new ones. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
-
 ## Other Software
 
 - #### [TLP](https://linrunner.de/en/tlp/tlp.html) - Linux Advanced Power Management.
+- #### [Spotify](https://www.spotify.com/pt/download/linux/) - Spotify client for linux.
+- #### [Wavebox](https://wavebox.io/download) - App to access all of online accounts in one like e-mail, slack and calendar.
+- #### [Discord](https://discordapp.com/) - Voice chat for *G A M E R S*.
+- #### [VLC](https://www.videolan.org/vlc/index.html) - Free and open source cross-platform multimedia player and framework that plays most multimedia files.
+- #### [Deluge](https://deluge-torrent.org/) - Lightweight, free and cross-platform BitTorrent client.
+- #### [VS Code](https://code.visualstudio.com/) - Open source text editor with strong extension support.
 - #### [CherryTree](https://www.giuspen.com/cherrytree/) - A hierarchical note taking application, featuring rich text and syntax highlighting, storing data in a single xml or sqlite file. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 - #### [KeeWeb](https://keeweb.info/) - Free cross-platform password manager compatible with KeePass. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 - #### [Intellij](https://www.jetbrains.com/idea/) - Integrated development environment (IDE) for developing computer software. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
-## Snap Software
-
-You can search thousands of snaps used by millions of people across 41 Linux distributions in the [snap](https://media1.tenor.com/images/e36fb32cfc3b63075adf0f1843fdc43a/tenor.gif?itemid=12502580) [store](https://snapcraft.io/store)
-I like:
-- [Slack](https://snapcraft.io/slack)
-- [Discord](https://snapcraft.io/discord)
-- [Sublime](https://snapcraft.io/sublime-text)
-- [VSCode](https://snapcraft.io/code)
-- [VLC](https://snapcraft.io/vlc)
-- [Spotify](https://snapcraft.io/spotify) - 4k displays owners click [here](https://community.spotify.com/t5/Desktop-Linux/Spotify-Hi-DPI-Fix-for-Snap-install/td-p/4576328) or [here](https://www.amazon.com/s?k=magnifier&crid=3HJHDUKJU50N8&sprefix=Magnifier%2Caps%2C396&ref=nb_sb_ss_i_1_9)
 
 ## Contributors
 A big thanks to everyone that helped by either suggesting or contributing to this guide, you can find them and their projects here:
