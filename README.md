@@ -29,7 +29,6 @@ If you'd also like to contribute to this repository in any way or suggest someth
   - [Terminal](#terminal)
   - [Development](#development)
   - [Other Software](#other-software)
-  - [Snap Software](#snap-software)
   - [Contributors](#contributors)
 
 ## Distro
@@ -217,6 +216,7 @@ If you are like me and you forget to copy your ssh keys [every](https://help.git
 - #### [VLC](https://www.videolan.org/vlc/index.html) - Free and open source cross-platform multimedia player and framework that plays most multimedia files.
 - #### [Deluge](https://deluge-torrent.org/) - Lightweight, free and cross-platform BitTorrent client.
 - #### [VS Code](https://code.visualstudio.com/) - Open source text editor with strong extension support.
+- #### [Chromium](https://www.chromium.org/) - Open source distribution of the Google Chrome browser, great for web development.
 - #### [CherryTree](https://www.giuspen.com/cherrytree/) - A hierarchical note taking application, featuring rich text and syntax highlighting, storing data in a single xml or sqlite file. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 - #### [KeeWeb](https://keeweb.info/) - Free cross-platform password manager compatible with KeePass. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 - #### [Intellij](https://www.jetbrains.com/idea/) - Integrated development environment (IDE) for developing computer software. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
