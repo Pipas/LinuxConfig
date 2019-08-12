@@ -59,9 +59,11 @@ Here are the themes that I use.
 
 ### Gnome and Shell theme 
  - [Macterial](https://www.gnome-look.org/p/1248255/) by MYHTIO
+ - [Arc Dark](https://www.gnome-look.org/p/1181106/) by wfpaisa [👥](https://github.com/Pipas/LinuxConfig/issues/2)
 
 ### Icon theme
 - [Paper](https://snwh.org/paper) by Sam Hewitt
+- [Numix Square](https://github.com/numixproject/numix-icon-theme-square) by numixproject [👥](https://github.com/Pipas/LinuxConfig/issues/2)
 
 ### Cursor theme
 - [Bibata](https://www.gnome-look.org/p/1197198/) by KaizIqbal
@@ -226,3 +228,4 @@ If you are like me and you forget to copy your ssh keys [every](https://help.git
 A big thanks to everyone that helped by either suggesting or contributing to this guide, you can find them and their projects here:
 
 - [Afonso Pinto](https://github.com/afonsobspinto)
+- [João Fraga](https://github.com/fraguinha)
