@@ -50,3 +50,5 @@ eval "$(pyenv virtualenv-init -)"
 twitch() {
     streamlink https://twitch.tv/"$1" best
 }
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

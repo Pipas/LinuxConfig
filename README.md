@@ -93,15 +93,17 @@ There are several Gnome extensions that make the experience much better and twea
 
 - #### [Argos](https://extensions.gnome.org/extension/1176/argos/) - loads Gnome extensions, used to display spotify current track on top bar.
 
-- #### [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/) - Changes the alt-tab menu to show window previews and all windows seperate.
+- #### [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/) - changes the alt-tab menu to show window previews and all windows seperate.
 
 - #### [OpenWeather](https://extensions.gnome.org/extension/750/openweather/) - weather indicator on your top bar, useful to have at times, highly customizable.
 
 - #### [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - displays system information in the top bar such as cpu, mem and network.
 
-- #### [Remove App Menu](https://extensions.gnome.org/extension/591/remove-app-menu/) - Removes app menu from top bar to reduce clutter.
+- #### [Remove App Menu](https://extensions.gnome.org/extension/591/remove-app-menu/) - removes app menu from top bar to reduce clutter.
 
 - #### [Hide Activities Button](https://extensions.gnome.org/extension/744/hide-activities-button/) - hides the activities button.
+
+- #### [KStatusNotifierItem](https://extensions.gnome.org/extension/615/appindicator-support/) - shows application icons in top bar.
 
 - #### [GS Connect](https://extensions.gnome.org/extension/1319/gsconnect/) - connects with KDE Connect. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
