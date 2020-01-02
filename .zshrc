@@ -43,6 +43,8 @@ tetris() {
 #Flutter
 export PATH=$PATH:/home/pipas/Development/flutter/bin
 
+export PATH="$PATH":"$HOME/Development/flutter/.pub-cache/bin"
+
 export PATH="/home/pipas/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

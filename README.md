@@ -33,7 +33,7 @@ If you'd also like to contribute to this repository in any way or suggest someth
 
 ## Distro
 
-[Pop!_OS 19.04](https://system76.com/pop) is my distro of choice, it's based on Ubuntu so you get good support from most mainstream apps (like Spotify and Discord) aswell as the Ubuntu community, but it's lighter, faster and just a better experience overall. It also has an ISO with nvidea drivers pre packaged so you don't have to install them yourself and you can take advantage of Ubuntu [PPAs](https://en.wikipedia.org/wiki/Ubuntu#Package_Archives). I found it to be a great experience out of the box even without the further customizations explained ahead and would recommend it to anyone wanting to try out Linux.
+[Pop!_OS 19.04](https://system76.com/pop) is my distro of choice, it's based on Ubuntu so you get good support from most mainstream apps (like Spotify and Discord) as well as the Ubuntu community, but it's lighter, faster and just a better experience overall. It also has an ISO with nvidea drivers pre packaged so you don't have to install them yourself and you can take advantage of Ubuntu [PPAs](https://en.wikipedia.org/wiki/Ubuntu#Package_Archives). I found it to be a great experience out of the box even without the further customizations explained ahead and would recommend it to anyone wanting to try out Linux.
 
 ## Pre-requisites
 
@@ -91,9 +91,7 @@ There are several Gnome extensions that make the experience much better and twea
 
 - #### [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/) - changes the gnome bar to a dock, highly customizable.
 
-- #### [Argos](https://extensions.gnome.org/extension/1176/argos/) - loads Gnome extensions, used to display spotify current track on top bar.
-
-- #### [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/) - changes the alt-tab menu to show window previews and all windows seperate.
+- #### [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/) - changes the alt-tab menu to show window previews and all windows separate.
 
 - #### [OpenWeather](https://extensions.gnome.org/extension/750/openweather/) - weather indicator on your top bar, useful to have at times, highly customizable.
 
@@ -107,26 +105,12 @@ There are several Gnome extensions that make the experience much better and twea
 
 - #### [GS Connect](https://extensions.gnome.org/extension/1319/gsconnect/) - connects with KDE Connect. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
-### Spotify Display
-On the folder argos you can find a script that adds your currently playing song to the Gnome top bar. To install it after installing the [Argos](https://extensions.gnome.org/extension/1176/argos/) extension described above, copy the contents of this folder to the argos config location
-
-```shell
-cp ~/.dotfiles/argos/mpris.6l.1s.sh ~/.config/argos/mpris.6l.1s.sh
-```
-then make the file executable
-
-```shell
-chmod +x ~/.config/argos/mpris.6l.1s.sh
-```
-
-This extension was created by giedriusStan and tweaked by me, the original repository can be found [here](https://github.com/giedriusStan/argos-mpris).
-
-
 ## Touchpad Gestures
 
-If you're using Linux in a laptop with a modern touchpad enabling gestures is a no brainer to increase productivity, I have achieved this with a program called [libinput-gestures](https://github.com/bulletmark/libinput-gestures) [👥](https://github.com/Pipas/LinuxConfig/pull/3).
+If you're using Linux in a laptop with a modern touchpad enabling gestures is a no-brainer
+ to increase productivity, I have achieved this with a program called [libinput-gestures](https://github.com/bulletmark/libinput-gestures) [👥](https://github.com/Pipas/LinuxConfig/pull/3).
 
-They have [installation instructions](https://github.com/bulletmark/libinput-gestures) on their repo, after the instalation is done you can use my personal config file by creating a symlink to it 
+They have [installation instructions](https://github.com/bulletmark/libinput-gestures) on their repo, after the installation is done you can use my personal config file by creating a symlink to it 
 
 ```shell
 ln -s ~/.dotfiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
@@ -161,6 +145,10 @@ and
 albert
 ```
 to your `Startup Applications` so they both run when you boot the system.
+
+## Emoji
+
+To properly install emoji in Linux, install the Noto font following [these steps](https://www.google.com/get/noto/help/install/) and then set font priority by following [these steps](https://github.com/stove-panini/fontconfig-emoji).
 
 ## Terminal
 
@@ -204,7 +192,7 @@ npm install -g spaceship-prompt
 I use [pyenv](https://github.com/pyenv/pyenv) to manage python virtual environments and versions for all my python projects, it can easely be installed by using the [pyenv-installer](https://github.com/pyenv/pyenv-installer).
 Check the [wiki](https://github.com/pyenv/pyenv/wiki) to install the necessary dependencies for installing python versions.
 ### nvm 
-I use [nvm](https://github.com/nvm-sh/nvm) to manage npm environments and versions for all my npm projects, it can easely be installed by using `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
+I use [nvm](https://github.com/nvm-sh/nvm) to manage npm environments and versions for all my npm projects, it can easily be installed by using `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`. [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
 ### [docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04) and [docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04) [👥](https://github.com/Pipas/LinuxConfig/pull/3)
 
