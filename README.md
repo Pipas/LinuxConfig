@@ -58,7 +58,7 @@ Another helper to faster install themes from the [gnome-look.org](gnome-look.org
 Here are the themes that I use.
 
 ### Gnome and Shell theme 
- - [Macterial](https://www.gnome-look.org/p/1248255/) by MYHTIO
+ - [material-black Blueberry](https://www.gnome-look.org/p/1316887/) by rtl88
  - [Arc Dark](https://www.gnome-look.org/p/1181106/) by wfpaisa [👥](https://github.com/Pipas/LinuxConfig/issues/2)
 
 ### Icon theme
